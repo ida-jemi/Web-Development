@@ -8,8 +8,6 @@
     <title>Fitness Fusion</title>
     <!-- Google Font for Custom Styling -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <!-- Adding the Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -22,14 +20,10 @@
             padding: 0px;
             background: url('img/dumbells.jpg');
             background-repeat: no-repeat;
-            /* To avoid repetition of background image */
             background-size: cover;
-            /* To make sure the image covers the entire area */
             background-position: center;
-            /* Center the background image */
         }
 
-        /* Creating a semi-transparent overlay to lighten the background */
         body::before {
             content: '';
             position: absolute;
@@ -38,9 +32,7 @@
             right: 0;
             bottom: 0;
             background: rgba(43, 38, 38, 0.5);
-            /* Dark overlay with 50% opacity */
             z-index: -1;
-            /* Place overlay behind content */
         }
 
         /* Header Styling */
@@ -51,79 +43,59 @@
             top: 20px;
         }
 
-        /* Styling the logo image */
         .left img {
             width: 136px;
             filter: invert(100%);
-            /* Invert the logo colors for better visibility */
         }
 
-        /* Text below the logo */
         .left div {
             line-height: 19px;
             font-size: 26px;
             text-align: center;
         }
 
-        /* Center-align the navigation bar */
         .mid {
             display: flex;
-            justify-content: center; /* Horizontally centers the navbar */
-            align-items: center; /* Vertically centers the navbar */
-            width: 100%; /* Ensure it takes up full width */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
 
-        /* Right section for buttons */
         .right {
             position: absolute;
             right: 34px;
             top: 43px;
             display: inline-block;
         }
+
         .navbar {
-            list-style: none; /* Remove default list styling (bullets) */
+            list-style: none;
             padding: 25px;
             margin: 25px;
-            display: flex; /* Align the list items in a row (side by side) */
-            justify-content: center; /* Center the nav items horizontally */
-            align-items: center; /* Vertically align items in the center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .navbar li {
-            margin: 0 20px; /* Add spacing between each navbar item */
+            margin: 0 20px;
         }
 
-        /* Navbar Link Styling */
         .navbar li a {
             color: white;
             text-decoration: none;
             padding: 10px;
             font-size: 25px;
-            align-items: centre;
-            /* Adjust font size of text */
-        }
-
-        /* Styling for the Icons inside the navbar */
-        .navbar li a i {
-            font-size: 18px;
-            /* Small icon size */
-            margin-right: 8px;
-            /* Space between icon and text */
-            vertical-align: middle;
-            /* Align icon vertically with text */
         }
 
         .navbar li a:hover {
             color: #f39c12;
-            /* Hover effect for text */
         }
 
         .navbar li a:hover i {
             color: #f39c12;
-            /* Hover effect for icon */
         }
 
-        /* Button Styling */
         .btn {
             font-family: 'Baloo Bhai', cursive;
             margin: 0px 9px;
@@ -136,66 +108,107 @@
             cursor: pointer;
         }
 
-        /* Hover Effect for Buttons */
         .btn:hover {
             background-color: rgb(31, 30, 30);
         }
 
-        /* Container Styling for Form */
+        /* Flex container for layout */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Form container on the left */
         .container {
+            width: 40%; /* Set the form container width */
+            padding: 50px;
             border: 2px solid white;
-            margin: 106px 80px;
-            padding: 75px;
-            width: 33%;
             border-radius: 28px;
+            margin-top: 100px;
+            margin-left: auto; /* Center align */
+            margin-right: auto; /* Center align */
         }
 
-        /* Styling for the form group container */
         .form-group {
-            position: relative;
-            margin: 11px auto;
+            align-content: center;
+            margin: 20px 0; /* Reduced margin for better spacing */
             padding: 5px;
-            display: block;
-            width: 508px;
+            width: 100%;
+            transition: box-shadow 0.3s ease-in-out;
         }
 
-        /* Hover effect on form group container */
-        .form-group:hover {          
-            box-shadow: 0 10px 10px white, 0 10px 10px rgba(109, 109, 102, 0.2); /* Curved shadow effect */
-            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        .form-group:hover {
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* Shadow effect on form group hover */
         }
 
-        /* Input Fields Styling */
         .form-group input {
-            font-family: 'Baloo Bhai', cursive;
             text-align: center;
-            display: block;
-            width: 508px;
-            padding: 1px;
+            width: 80%; /* Center the input fields */
+            padding: 10px;
             border: 2px solid black;
-            margin: 11px auto;
-            font-size: 25px;
+            font-size: 18px;
             border-radius: 8px;
-            background-color: #f9f9f9; /* Light background for input fields */
-            transition: all 0.3s ease; /* Smooth transition for hover/focus effects */
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
         }
 
-        /* Form Heading Styling */
+        .form-group input:hover {
+            box-shadow: 0px 5px 8px white; /* Input field hover shadow */
+        }
+
         .container h1 {
             text-align: center;
+            font-size: 28px;
         }
 
-        /* Submit Button Styling */
-        .container button {
+        /* Sidebar on the right - resized */
+        .right-sidebar {
+            width: 25%; /* Reduced the width of the sidebar */
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.5);
+            margin-top: 100px;
+            transition: box-shadow 0.3s ease;
+            height: auto; /* Allow the sidebar to fit the content dynamically */
+        }
+
+        .right-sidebar:hover {
+            box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.7); /* Hover shadow for sidebar */
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav li {
+            margin: 0; /* Removed extra space between items */
+            padding: 10px 0; /* Adjusted padding for cleaner look */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .sidebar-nav li a {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            padding: 10px;
             display: block;
-            width: 74%;
-            margin: 20px auto;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Navbar Dropdown Styling */
+        .sidebar-nav li a:hover {
+            background-color: #f39c12;
+            color: #333;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sidebar item hover shadow */
+        }
+
+        /* Dropdown Styling */
         .dropdown {
-            display: inline-block;
             position: relative;
+            display: inline-block;
         }
 
         .dropdown-content {
@@ -221,6 +234,50 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+
+        /* Chat with Experts Fixed Button */
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: green;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .chat-button:hover {
+            background-color: #e67e22;
+        }
+
+        .chat-button i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -228,19 +285,18 @@
     <header class="header">
         <!-- Left box for logo -->
         <div class="left">
-            <img src="img/logo.webp" alt="">
+            <img src="img/logo.webp" alt="Fitness Fusion Logo">
             <div>Fitness Fusion</div>
         </div>
 
         <!-- Mid box for navbar -->
         <div class="mid">
             <ul class="navbar">
-                <li><a href="#"><i class="fas fa-home"></i> Home</a></li> <!-- House Icon for Home -->
-                <li><a href="#"><i class="fas fa-users"></i> About Us</a></li> <!-- User Icon for About Us -->
-                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact Us</a></li> <!-- Phone Icon for Contact Us -->
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> About Us</a></li>
+                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
                 <li class="dropdown">
                     <a href="#"><i class="fas fa-calculator"></i> Fitness Calculator</a>
-                    <!-- Calculator Icon for Fitness Calculator -->
                     <div class="dropdown-content">
                         <a href="#">BMI Calculator</a>
                         <a href="#">Calorie Burn Calculator</a>
@@ -256,72 +312,70 @@
         </div>
     </header>
 
-    <!-- Form Section for Joining the Gym -->
-    <div class="container">
-        <h1>Join the best gym of Delhi now</h1>
-        <form action="noaction.php">
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Age">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Gender">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Locality">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Email Id">
-            </div>
-            <div class="form-group">
-                <input type="text" name="" placeholder="Your Phone Number">
-            </div>
-            <button class="btn">Submit</button>
-        </form>
+    <!-- Main content container for both form and sidebar -->
+    <div class="main-content">
+        <!-- Form Section for Joining the Gym -->
+        <div class="container">
+            <h1>Join the best gym of Delhi now</h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Age">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Gender">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Locality">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Email Id">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Your Phone Number">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Right Sidebar Navigation (Smaller width) -->
+        <div class="right-sidebar">
+            <ul class="sidebar-nav">
+                <li><a href="#"><i class="fas fa-dumbbell"></i> Workout Plans</a></li>
+                <li><a href="#"><i class="fas fa-apple-alt"></i> Nutrition Plans</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Membership Details</a></li>
+                <li><a href="#"><i class="fas fa-tag"></i> Pricing Plans</a></li>
+                <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Trainer Profiles</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Events/Workshops</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Reviews</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Chat Button -->
+    <div class="chat-button">
+        <i class="fas fa-comments"></i> Chat with Experts Now !!!
     </div>
 
     <!-- Footer Section with Contact Information -->
     <footer>
-        <div style="text-align: center; padding: 20px; background-color: #333; color: white;">
-            <p>Fitness Fusion - The Best Gym in Delhi</p>
-            <p>Address: 123 Fitness St, Delhi, India</p>
-            <p>Email: info@fitnessfusion.com | Phone: +91 123 456 7890</p>
-            <p>Follow Us:</p>
-            <a href="#" style="color: white; padding: 10px;">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-            <a href="#" style="color: white; padding: 10px;">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="#" style="color: white; padding: 10px;">
-                <i class="fab fa-twitter"></i> Twitter
-            </a>
-        </div>
+        <p>Fitness Fusion - The Best Gym in Delhi</p>
+        <p>Address: 123 Fitness St, Delhi, India</p>
+        <p>Email: info@fitnessfusion.com | Phone: +91 123 456 7890</p>
+        <p>Follow Us:</p>
+        <a href="#" style="color: white; padding: 10px;">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" style="color: white; padding: 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="#" style="color: white; padding: 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
     </footer>
-
-    <style>
-        footer a i {
-            font-size: 20px;
-            /* Icon size */
-            margin-right: 8px;
-            /* Space between icon and text */
-        }
-
-        footer a {
-            color: white;
-            /* Ensure text is white */
-            padding: 10px;
-            text-decoration: none;
-            /* Remove underline */
-        }
-
-        footer a:hover {
-            color: #f39c12;
-        }
-    </style>
-
 
 </body>
 
